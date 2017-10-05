@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to THIS BEER PAGE BUTTERFLY!!!
+  </h1>
+
+  <nav>
+      <a routerLink="/"> Home </a>
+      <br>
+
+      <div *ngIf="!userInfo">
+        <a routerLink="/signup"> Sign Up </a>
+        <br>
+
+        <a routerLink="/login"> Log In </a>
+        <br>
+      </div>
+
+      <div *ngIf="userInfo">
+
+        <button (click)="logMeOut()"> Log Out </button>
+        <br>
+      </div>
+    </nav>
+
+<router-outlet></router-outlet>
