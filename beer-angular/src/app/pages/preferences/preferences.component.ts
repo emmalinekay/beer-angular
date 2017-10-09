@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PreferencesService } from '../../services/preferences.service';
+import { Router } from '@angular/router';
+import { BeerService } from '../../services/beer.service';
+
 @Component({
   selector: 'app-preferences',
   templateUrl: './preferences.component.html',
@@ -7,9 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreferencesComponent implements OnInit {
 
-  constructor() { }
+  preferences: any[] = [];
+
+  constructor(
+    private ourService: PreferencesService,
+    private beerService: BeerService,
+    private ourRouter: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  postTheStyle(style){
+    this.preferences.push(style);
+    console.log(this.preferences);
+  }
+
+  sendPreferences() {
+    //send the user preferences
+    this.ourService.postPreferences(this.preferences);
+    this.ourRouter.navigate(['/dashboard']);
   }
 
 }

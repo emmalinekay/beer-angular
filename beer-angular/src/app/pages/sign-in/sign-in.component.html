@@ -1,12 +1,13 @@
-<div class="form-container">
-  <div class="form-wrapper">
+<body>
+<div id="login">
+  <div class="signup-wrapper">
     <h2> Sign Up </h2>
 
     <p class="error" *ngIf="errorMessage">
       {{ errorMessage }}
     </p>
 
-    <form (ngSubmit)="signupSubmit()">
+    <form (ngSubmit)="signupSubmit()" name='form-login'>
       <label for="full-name-input"> Full Name </label>
       <input  id="full-name-input" type="text" placeholder="John Smith"
           name="fullName" [(ngModel)]="newUser.signupFullName">
@@ -22,19 +23,21 @@
           name="userPassword" [(ngModel)]="newUser.signupPassword">
       <br>
 
-      <button> Sign Up </button>
+      <button type="submit"> Sign Up </button>
     </form>
   </div>
+</div>
 
 
-  <div class="form-wrapper">
+  <div id="login">
+    <div class="login-wrapper">
     <h2> Log In </h2>
 
     <p class="error" *ngIf="loginError">
       {{ loginError }}
     </p>
 
-    <form (ngSubmit)="loginSubmit()">
+    <form (ngSubmit)="loginSubmit()" name='form-login'>
       <label for="log-username-input"> Username </label>
       <input  id="log-username-input" type="text" placeholder="Beerlord123"
           name="username" [(ngModel)]="loginUser.loginUsername">
@@ -45,7 +48,7 @@
           name="userPassword" [(ngModel)]="loginUser.loginPassword">
       <br>
 
-      <button> Log In </button>
+      <button type="submit"> Log In </button>
     </form>
   </div>
 </div>
