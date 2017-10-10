@@ -1,0 +1,17 @@
+<a routerLink="/dashboard"> Back to list </a>
+
+<img [src]="beerInfo.image">
+
+<h2> {{ beerInfo.name }} </h2>
+
+<p> Location: {{ beerInfo.location }} </p>
+
+<p> Style: {{ beerInfo.style }} </p>
+
+<p> IBU: {{ beerInfo.ibu }} </p>
+
+<p> ABV: {{ beerInfo.abv }} </p>
+
+<p> Description: {{ beerInfo.description }} </p>
+
+<button (click)="postFavorite(beerInfo)"> Favorite </button>

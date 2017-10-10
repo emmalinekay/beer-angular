@@ -5,13 +5,17 @@ import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { PreferencesComponent } from './pages/preferences/preferences.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
+import { BeerDetailsComponent } from './pages/dashboard/beer-details/beer-details.component';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
 
 const routes: Routes = [
-  { path: '',               component: HomeComponent },
-  { path: 'signup',         component: SignInComponent },
-  { path: 'login',          component: SignInComponent },
-  { path: 'preferences',    component: PreferencesComponent},
-  { path: 'dashboard',      component: DashboardComponent}
+  { path: '',                  component: HomeComponent },
+  { path: 'signup',            component: SignInComponent },
+  { path: 'login',             component: SignInComponent },
+  { path: 'preferences',       component: PreferencesComponent},
+  { path: 'dashboard',         component: DashboardComponent},
+  { path: 'beers/:beerId',     component: BeerDetailsComponent },
+  { path: 'favorites',         component: FavoritesComponent }
 ];
 
 @NgModule({

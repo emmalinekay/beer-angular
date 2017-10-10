@@ -1,7 +1,38 @@
 img {
   height: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: all .2s ease-in-out;
 }
+
+img:hover {
+  transform: scale(1.7);
+  overflow: visible;
+ }
 
 li {
   display: inline-block;
+}
+
+ul {
+  height: 200px;
+}
+
+.pn-ProductNav {
+    /* Make this scrollable when needed */
+    overflow-x: visible;
+    /* We don't want vertical scrolling */
+    overflow-y: scroll;
+    /* Make an auto-hiding scroller for the 3 people using a IE */
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    /* For WebKit implementations, provide inertia scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* We don't want internal inline elements to wrap */
+    white-space: nowrap;
+    /* Remove the default scrollbar for WebKit implementations */
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }

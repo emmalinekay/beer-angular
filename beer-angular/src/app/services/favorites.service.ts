@@ -4,9 +4,8 @@ import { Router } from '@angular/router';
 
 import { environment } from '../../environments/environment';
 
-
 @Injectable()
-export class PreferencesService {
+export class FavoritesService {
 
   baseUrl: string = environment.apiUrl;
 
@@ -16,15 +15,5 @@ export class PreferencesService {
   ) { }
 
 
-  //POST /api/preferences
-  postPreferences(preferences){
-    console.log(preferences);
-    return this.ourHttp.post(
-      this.baseUrl + '/api/preferences', {preferences},
-      { withCredentials: true }
-    );
+
   }
-
-
-
-}

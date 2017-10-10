@@ -29,8 +29,9 @@ export class PreferencesComponent implements OnInit {
 
   sendPreferences() {
     //send the user preferences
-    this.ourService.postPreferences(this.preferences);
-    this.ourRouter.navigate(['/dashboard']);
+    this.ourService.postPreferences(this.preferences).subscribe(() => {
+      this.ourRouter.navigate(['/dashboard']);
+    });
   }
 
 }

@@ -23,10 +23,34 @@
       </div>
     </nav> -->
 
-    <header class="header s-header">
+<header class="header" role="banner">
+  <h1 class="logo">
+    <a href="#"><span>Bibix</span></a>
+  </h1>
+  <div class="nav-wrap">
+    <nav class="main-nav" role="navigation">
+      <ul class="unstyled list-hover-slide">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/signup">Sign Up</a></li>
+        <li><a routerLink="/login">Log In</a></li>
+        <li><a routerLink="/preferences">Preferences</a></li>
+        <li><a routerLink="/dashboard">Dashboard</a></li>
+        <li><a routerLink="/favorites">Favorites</a></li>
+      </ul>
+    </nav>
+    <ul class="social-links list-inline unstyled list-hover-slide">
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Google+</a></li>
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">CodePen</a></li>
+    </ul>
+  </div>
+</header>
+
+    <!-- <header class="header s-header">
     <div class="container nopadding">
         <a class="s-logo" href="#">
-            <!-- <img src="img/shop/logo.png" alt="logo"/> -->
+
         </a>
         <div class="menu-button s-menu-button">
             <span></span>
@@ -39,12 +63,12 @@
                 <li ><a class="scroll-to-link" routerLink="/signup"><i class="s-about-ico" ></i>Sign Up</a></li>
                 <li><a class="scroll-to-link" routerLink="/login"><i class="s-interior-ico"></i>Log In</a></li>
                 <li ><button (click)="logMeOut()" class="scroll-to-link" ><i class="s-service-ico"></i>Log Out</button></li>
-                <!-- <li ><a class="scroll-to-link" href="#team"><i class="s-team-ico"></i>team</a></li>
-                <li ><a class="scroll-to-link" href="#product"><i class="s-product-ico"></i>products</a></li>
-                <li ><a class="scroll-to-link" href="#contact"><i class="s-contact-ico"></i>contact</a></li> -->
+                <li ><a class="scroll-to-link" routerLink="/preferences"><i class="s-team-ico"></i>preferences</a></li>
+                <li ><a class="scroll-to-link" routerLink="/dashboard"><i class="s-product-ico"></i>dashboard</a></li>
+                <li ><a class="scroll-to-link" routerLink="/favorites"><i class="s-product-ico"></i>Favorites</a></li>
             </ul>
         </nav>
     </div>
-</header>
+</header> --> 
 
 <router-outlet></router-outlet>

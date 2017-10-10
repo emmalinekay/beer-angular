@@ -1,7 +1,23 @@
 <h2>  THIS IS YOUR BUTTERFLY BEER DASHBOARD </h2>
 
+<!-- <div id="row">
+<div class="title">
 <ul>
-  <li *ngFor="let oneBeer of beerList.getBeers()">
+  <li *ngFor="let oneBeer of myBeers">
     <img src="{{oneBeer.image}}" alt="">
   </li>
 </ul>
+<div> -->
+<h2> Your Beer Recommendations </h2>
+<nav class="pn-ProductNav">
+    <div class="pn-ProductNav_Contents">
+      <ul>
+        <li *ngFor="let oneBeer of myBeers">
+          <a [routerLink]="['/beers', oneBeer._id]">
+          <img src="{{oneBeer.image}}">
+          </a>
+
+        </li>
+      </ul>
+    </div>
+</nav>

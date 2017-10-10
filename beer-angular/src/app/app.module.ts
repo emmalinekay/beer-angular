@@ -14,6 +14,9 @@ import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { PreferencesComponent } from './pages/preferences/preferences.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
+import { BeerDetailsComponent } from './pages/dashboard/beer-details/beer-details.component';
+import { FavoritesComponent } from './pages/favorites/favorites.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { HomeComponent } from './pages/home/home.component';
     SignInComponent,
     PreferencesComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    BeerDetailsComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
