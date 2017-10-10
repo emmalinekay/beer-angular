@@ -1,7 +1,37 @@
+section#landing {
+	background-image: url("http://www.thebeerspotandgrill.com/wp-content/uploads/2014/05/Beerslide3.jpg");
+	position: relative;
+	background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: cover;*/
+    position: relative;
+    height: 80vh;
+}
+
+.middle-heading {
+	position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+}
+.middle-heading h1 {
+	font-size: 6em;
+    color: #FFF;
+    margin: 0.67em 0;
+    margin-bottom: 10px;
+}
+.middle-heading p {
+	text-transform: uppercase;
+	color: #FFF;
+	font-size: 2em;
+    margin-top: 5px;
+		margin-bottom: 20px;
+}
+
 img {
-  height: 200px;
-  padding-left: 20px;
-  padding-right: 20px;
+  height: 230px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: 20px;
   margin-right: 20px;
   transition: all .2s ease-in-out;
@@ -20,7 +50,18 @@ ul {
   height: 200px;
 }
 
+h2 {
+  font-family: "Helvetica Neue";
+  font-size: 18px;
+  font-weight: 200;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5%;
+}
+
 .pn-ProductNav {
+    padding-bottom: 70px;
     /* Make this scrollable when needed */
     overflow-x: visible;
     /* We don't want vertical scrolling */
@@ -35,4 +76,14 @@ ul {
     &::-webkit-scrollbar {
         display: none;
     }
+
+}
+
+.drink-image {
+  height: 400px;
+}
+
+.drink-image:hover {
+  transform: scale(1.0);
+  overflow: visible;
 }

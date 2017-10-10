@@ -1,13 +1,18 @@
-<h2>  THIS IS YOUR BUTTERFLY BEER DASHBOARD </h2>
+<section id="landing">
+	<!-- <div class="header-wrapper">
+		<header>
+			<img src="../assets/Beer-Photos/Beer-icon.png" class="brand">
+		</header>
+	</div> -->
 
-<!-- <div id="row">
-<div class="title">
-<ul>
-  <li *ngFor="let oneBeer of myBeers">
-    <img src="{{oneBeer.image}}" alt="">
-  </li>
-</ul>
-<div> -->
+<div class="middle-heading">
+	<!-- <h1>Know Your Beers</h1>
+	<p>Save your favorites.</p> -->
+  <img src="http://static.tumblr.com/02bb1e051e26d71b15e8113790dcf639/io6mgvq/yJhnm6jpl/tumblr_static_76glsb9ktbswkg4ccc848owgs.png" class="drink-image">
+</div>
+</section>
+
+
 <h2> Your Beer Recommendations </h2>
 <nav class="pn-ProductNav">
     <div class="pn-ProductNav_Contents">
@@ -16,7 +21,45 @@
           <a [routerLink]="['/beers', oneBeer._id]">
           <img src="{{oneBeer.image}}">
           </a>
+        </li>
+      </ul>
+    </div>
+</nav>
 
+<h2> Oktoberfest Beers </h2>
+<nav class="pn-ProductNav">
+    <div class="pn-ProductNav_Contents">
+      <ul>
+        <li *ngFor="let oneBeer of octBeers">
+          <a [routerLink]="['/beers', oneBeer._id]">
+          <img src="{{oneBeer.image}}">
+          </a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<h2> Oktoberfest Beers </h2>
+<nav class="pn-ProductNav">
+    <div class="pn-ProductNav_Contents">
+      <ul>
+        <li *ngFor="let oneBeer of usaBeers">
+          <a [routerLink]="['/beers', oneBeer._id]">
+          <img src="{{oneBeer.image}}">
+          </a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<h2> Beers with lots of Alcohol </h2>
+<nav class="pn-ProductNav">
+    <div class="pn-ProductNav_Contents">
+      <ul>
+        <li *ngFor="let oneBeer of highBeers">
+          <a [routerLink]="['/beers', oneBeer._id]">
+          <img src="{{oneBeer.image}}">
+          </a>
         </li>
       </ul>
     </div>

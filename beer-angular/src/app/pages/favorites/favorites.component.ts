@@ -22,7 +22,16 @@ export class FavoritesComponent implements OnInit {
     this.beerService.getMyFavorites()
         .subscribe(
           (listOfFavs: any[]) => {
-              this.myFavs = listOfFavs;
+             listOfFavs.forEach((firstFav) => {
+               firstFav.forEach((oneFav) => {
+                 //  return oneFav;
+                 this.myFavs.push(oneFav);
+                 console.log(this.myFavs);
+
+               });
+            });
+
+              // this.myFavs = listOfFavs;
           },
 
           (errInfo) => {

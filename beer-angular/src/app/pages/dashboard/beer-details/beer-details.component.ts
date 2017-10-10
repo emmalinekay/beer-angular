@@ -21,6 +21,7 @@ export class BeerDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.ourActivated.params.subscribe((myParams) => {
+      console.log(myParams.beerId);
                               // { path: 'beer'/:beerId'
         this.ourBeer.getBeerDetails(myParams.beerId)
           .subscribe(

@@ -1,17 +1,26 @@
+<div class="beer-card">
 <a routerLink="/dashboard"> Back to list </a>
 
-<img [src]="beerInfo.image">
 
-<h2> {{ beerInfo.name }} </h2>
+    <div class="image">
+      <img [src]="beerInfo.image">
+    </div>
 
-<p> Location: {{ beerInfo.location }} </p>
 
-<p> Style: {{ beerInfo.style }} </p>
 
-<p> IBU: {{ beerInfo.ibu }} </p>
+    <div class="info">
+      <h2> {{ beerInfo.name }} </h2>
 
-<p> ABV: {{ beerInfo.abv }} </p>
+      <p> Location: {{ beerInfo.location }} </p>
 
-<p> Description: {{ beerInfo.description }} </p>
+      <p> Style: {{ beerInfo.style }} </p>
 
-<button (click)="postFavorite(beerInfo)"> Favorite </button>
+      <p> IBU: {{ beerInfo.ibu }} </p>
+
+      <p> ABV: {{ beerInfo.abv }} </p>
+
+      <p> Description: {{ beerInfo.description }} </p>
+
+      <button (click)="postFavorite(beerInfo)"> Favorite </button>
+    </div>
+</div>

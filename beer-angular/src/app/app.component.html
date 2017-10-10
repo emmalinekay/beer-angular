@@ -1,8 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
+<!-- <div>
   <h1>
     Welcome to THIS BEER PAGE BUTTERFLY!!!
-  </h1>
+  </h1> -->
 
   <!-- <nav>
       <a routerLink="/"> Home </a>
@@ -23,13 +23,13 @@
       </div>
     </nav> -->
 
-<header class="header" role="banner">
-  <h1 class="logo">
-    <a href="#"><span>Bibix</span></a>
-  </h1>
+<header>
+  <div class="nav-text">
+    <a routerLink="/"><img src="../assets/Bibix.png" class="bibix-icon"></a>
+  </div>
   <div class="nav-wrap">
     <nav class="main-nav" role="navigation">
-      <ul class="unstyled list-hover-slide">
+      <ul>
         <li><a routerLink="/">Home</a></li>
         <li><a routerLink="/signup">Sign Up</a></li>
         <li><a routerLink="/login">Log In</a></li>
@@ -38,37 +38,41 @@
         <li><a routerLink="/favorites">Favorites</a></li>
       </ul>
     </nav>
-    <ul class="social-links list-inline unstyled list-hover-slide">
-      <li><a href="#">Twitter</a></li>
-      <li><a href="#">Google+</a></li>
-      <li><a href="#">GitHub</a></li>
-      <li><a href="#">CodePen</a></li>
-    </ul>
   </div>
 </header>
 
-    <!-- <header class="header s-header">
-    <div class="container nopadding">
-        <a class="s-logo" href="#">
-
-        </a>
-        <div class="menu-button s-menu-button">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav class="nav s-nav">
-            <ul>
-                <li class="active" ><a class="scroll-to-link" routerLink="/"><i class="s-home-ico"></i>home</a></li>
-                <li ><a class="scroll-to-link" routerLink="/signup"><i class="s-about-ico" ></i>Sign Up</a></li>
-                <li><a class="scroll-to-link" routerLink="/login"><i class="s-interior-ico"></i>Log In</a></li>
-                <li ><button (click)="logMeOut()" class="scroll-to-link" ><i class="s-service-ico"></i>Log Out</button></li>
-                <li ><a class="scroll-to-link" routerLink="/preferences"><i class="s-team-ico"></i>preferences</a></li>
-                <li ><a class="scroll-to-link" routerLink="/dashboard"><i class="s-product-ico"></i>dashboard</a></li>
-                <li ><a class="scroll-to-link" routerLink="/favorites"><i class="s-product-ico"></i>Favorites</a></li>
-            </ul>
-        </nav>
-    </div>
-</header> --> 
 
 <router-outlet></router-outlet>
+
+<footer>
+<section class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+          <h4 class="footer-titles">REVERA</h4>
+          <p class="fourth-text"> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vehicula erat non congue cursus. Aenean auctor nulla quis augue dictum, sed sagittis odio varius? Aliquam nec venenatis turpis. Aenean euismod arcu vel volutpat tristique. In mattis ipsum quis magna feugiat, id tempus metus accumsan.</p>
+      </div>
+      <div class="col-lg-3">
+          <h4 class="footer-titles">META</h4>
+          <p class="fourth-text"> Log in <br />Entries RSS <br /> Comments RSS <br /> Wordpress.org <br /></p>
+        </div>
+      <div class="col-lg-3">
+          <h4 class="footer-titles">ARCHIVES</h4>
+          <p class="fourth-text">
+            August 2013
+          </p>
+      </div>
+      <div class="col-lg-3">
+          <h4 class="footer-titles">RECENT POSTS</h4>
+          <p class="fourth-text">
+            Etiam mauris tortor, pharetra quis lobortis in, pharetra in diam <br />
+            Nunc libero elit, iaculis nec augue non <br />
+            Falauris sollicitudin quis dolor venenatis facilisis <br />
+            Phasellus aliquet iaculis neque accumsan aliquam <br />
+            Vivamus blandit ipsum sed arcu euismod <br />
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
+</footer>

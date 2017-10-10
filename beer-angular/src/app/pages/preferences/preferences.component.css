@@ -1,8 +1,63 @@
 img {
-  height: 200px;
+  height: 300px;
+}
+
+.beer-icon {
+  height: 80px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-family: "Helvetica Neue";
+  font-size: 26px;
+  font-weight: 100;
+  color: white;
+  padding-top: 15px;
+}
+
+.pref-header {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 div {
   display: inline-block;
   padding: 30px;
+}
+
+h2 {
+  color: white;
+}
+
+.row {
+  width: 100%;
+  text-align: center;
+}
+
+
+.form-check-label {
+  text-align: center;
+  padding-top: 10%;
+}
+
+button {
+  	text-decoration: none;
+    font-family: "Helvetica Neue";
+    font-weight: lighter;
+    font-size: 22px;
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    border-color: white;
+    padding: 10px 30px;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+		margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+button:hover {
+  color: #efc84a;
+  border-color: #efc84a;
 }
