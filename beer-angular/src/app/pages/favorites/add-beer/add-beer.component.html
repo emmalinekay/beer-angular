@@ -1,0 +1,52 @@
+<div class="left-side">
+<h2> Add a Beer </h2>
+
+<p class="error" *ngIf="errorMessage">
+  {{ errorMessage }}
+</p>
+
+<form (ngSubmit)="saveNewBeer()" class="beer-form">
+  <label for="beer-name-input"> Beer Name </label> <br>
+  <input  id="beer-name-input" type="text" placeholder="Heineken"
+      name="beerName" [(ngModel)]="newBeer.beerName">
+  <br>
+
+  <label for="url-input"> Image URL/Beer Page URL </label> <br>
+  <input  id="url-input" type="text" placeholder="http://example.com/beer.gif"
+      name="beerImage"  [(ngModel)]="newBeer.beerImage">
+  <br>
+  <img [src]="newBeer.beerImage">
+  <br>
+
+  <label for="location-input"> Location </label> <br>
+  <input  id="location-input" type="text" placeholder="Denver, CO"
+      name="beerLocation"  [(ngModel)]="newBeer.beerLocation">
+  <br>
+
+  <label for="style-input"> Beer Style </label> <br>
+  <input  id="style-input" type="text" placeholder="Stout"
+      name="beerStyle"  [(ngModel)]="newBeer.beerStyle">
+  <br>
+
+  <label for="ibu-input"> IBU </label><br>
+  <input  id="ibu-input" type="number" placeholder=""
+      name="beerIbu"  [(ngModel)]="newBeer.beerIbu">
+  <br>
+
+  <label for="abv-input"> ABV </label><br>
+  <input  id="abv-input" type="number" placeholder=""
+      name="beerAbv"  [(ngModel)]="newBeer.beerAbv">
+  <br>
+
+  <label for="description-input"> Description </label><br>
+  <input  id="description-input" type="text" placeholder="Such great beer. So Amazing. Much wow"
+      name="beerDescription"  [(ngModel)]="newBeer.beerDescription">
+  <br>
+
+  <button> Save Beer </button>
+</form>
+</div>
+
+<div class="right-side">
+  <img src="../assets/beer-png.png" class="beer-image">
+</div>

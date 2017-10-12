@@ -9,6 +9,7 @@ import { BeerDetailsComponent } from './pages/dashboard/beer-details/beer-detail
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { StylesComponent } from './pages/styles/styles.component';
 import { AboutComponent } from './pages/about/about.component';
+import { AddBeerComponent } from './pages/favorites/add-beer/add-beer.component';
 
 const routes: Routes = [
   { path: '',                  component: HomeComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'beers/:beerId',     component: BeerDetailsComponent },
   { path: 'favorites',         component: FavoritesComponent },
   { path: 'about',             component: AboutComponent},
-  { path: 'styles',            component: StylesComponent}
+  { path: 'styles',            component: StylesComponent},
+  { path: 'yourbeers',         component: AddBeerComponent},
 ];
 
 @NgModule({

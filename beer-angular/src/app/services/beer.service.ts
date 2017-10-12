@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { BeerInfo } from '../interfaces/beer-info';
+
 import { PreferencesService } from '../services/preferences.service';
 
 import { environment } from '../../environments/environment';
@@ -47,4 +49,12 @@ export class BeerService {
       { withCredentials: true }
     );
 }
+
+    postBeer(beerFields: BeerInfo) {
+      return this.ourHttp.post(
+        this.baseUrl + '/api/beers',
+        beerFields,
+        { withCredentials: true }
+        );
+    }
 }

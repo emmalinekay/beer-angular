@@ -18,6 +18,7 @@ import { BeerDetailsComponent } from './pages/dashboard/beer-details/beer-detail
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { AboutComponent } from './pages/about/about.component';
 import { StylesComponent } from './pages/styles/styles.component';
+import { AddBeerComponent } from './pages/favorites/add-beer/add-beer.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { StylesComponent } from './pages/styles/styles.component';
     BeerDetailsComponent,
     FavoritesComponent,
     AboutComponent,
-    StylesComponent
+    StylesComponent,
+    AddBeerComponent
   ],
   imports: [
     BrowserModule,
