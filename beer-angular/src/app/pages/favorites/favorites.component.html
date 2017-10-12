@@ -1,14 +1,12 @@
-<a routerLink="/dashboard"> Back to list </a>
+<a routerLink="/dashboard" class="list-link"> Back to list </a>
+
 
 <ul>
+  <div class="favorites">
   <li *ngFor="let oneFav of myFavs">
-    <h3> {{ oneFav.name }} </h3>
     <img [src]="oneFav.image">
-    <p> {{ oneFav.location }} </p>
-    <p> {{ oneFav.style }} </p>
-    <p> {{ oneFav.ibu }} </p>
-    <p> {{ oneFav.abv}} </p>
-    <p> {{ oneFav.description}} </p>
-    <a [routerLink]="['/beers', oneFav._id]">More</a>
+    <a [routerLink]="['/beers', oneFav._id]"><h4> {{ oneFav.name }} </h4></a>
+    <img src="http://www.iconsdb.com/icons/preview/icon-sets/web-2-orange-2/x-mark-xxl.png" (click)="deleteClick()" class="x-icon">
   </li>
+  </div>
 </ul>

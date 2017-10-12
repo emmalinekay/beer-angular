@@ -1,5 +1,5 @@
 <div class="beer-card">
-<a routerLink="/dashboard"> Back to list </a>
+<!-- <a routerLink="/dashboard">  Back to list </a> -->
 
 
     <div class="image">
@@ -11,16 +11,21 @@
     <div class="info">
       <h2> {{ beerInfo.name }} </h2>
 
-      <p> Location: {{ beerInfo.location }} </p>
+      <p> <b> Location: </b> {{ beerInfo.location }} </p>
 
-      <p> Style: {{ beerInfo.style }} </p>
+      <p> <b> Style: </b> <a routerLink="/styles">{{ beerInfo.style }}</a> </p>
 
-      <p> IBU: {{ beerInfo.ibu }} </p>
+      <p> <b> IBU: </b> {{ beerInfo.ibu }} </p>
 
-      <p> ABV: {{ beerInfo.abv }} </p>
+      <p> <b> ABV: </b> {{ beerInfo.abv }} </p>
 
-      <p> Description: {{ beerInfo.description }} </p>
+      <p> <b> Description: </b> {{ beerInfo.description }} </p>
 
-      <button (click)="postFavorite(beerInfo)"> Favorite </button>
+      <!-- <button (click)="postFavorite(beerInfo)"> Favorite </button> -->
+
+      <div class="row button-row">
+        <button type="button" class="btn btn-outline-secondary" (click)="postFavorite(beerInfo)"> Favorite </button>
+      </div>
     </div>
+    <a routerLink="/dashboard">  Back to list </a>
 </div>

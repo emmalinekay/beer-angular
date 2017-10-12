@@ -16,6 +16,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BeerDetailsComponent } from './pages/dashboard/beer-details/beer-details.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { AboutComponent } from './pages/about/about.component';
+import { StylesComponent } from './pages/styles/styles.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
     DashboardComponent,
     HomeComponent,
     BeerDetailsComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    AboutComponent,
+    StylesComponent
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@ import { BeerService } from '../../services/beer.service';
 })
 export class FavoritesComponent implements OnInit {
 
-  myFavs: any[] = [];
+  myFavs: any = [];
   errorMessage: string;
 
   constructor(
@@ -45,5 +45,14 @@ export class FavoritesComponent implements OnInit {
         ); // .subscribe()
   }
 
+  deleteClick() {
+        // call the API for deletion
+        this.beerService.deleteBeer(this.myFavs._id)
+          .subscribe(
+            () => {
+                this.ourRouter.navigate(['/dashboard']);
+            }
+          );
+    }
 
 }

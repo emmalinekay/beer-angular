@@ -7,6 +7,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BeerDetailsComponent } from './pages/dashboard/beer-details/beer-details.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { StylesComponent } from './pages/styles/styles.component';
+import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
   { path: '',                  component: HomeComponent },
@@ -15,7 +17,9 @@ const routes: Routes = [
   { path: 'preferences',       component: PreferencesComponent},
   { path: 'dashboard',         component: DashboardComponent},
   { path: 'beers/:beerId',     component: BeerDetailsComponent },
-  { path: 'favorites',         component: FavoritesComponent }
+  { path: 'favorites',         component: FavoritesComponent },
+  { path: 'about',             component: AboutComponent},
+  { path: 'styles',            component: StylesComponent}
 ];
 
 @NgModule({

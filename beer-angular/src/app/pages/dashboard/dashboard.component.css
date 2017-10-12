@@ -51,10 +51,10 @@ ul {
 }
 
 h2 {
-  font-family: "Helvetica Neue";
-  font-size: 18px;
-  font-weight: 200;
-  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: lighter;
+  color: #A3AAAA;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 5%;

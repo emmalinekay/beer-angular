@@ -40,4 +40,11 @@ export class BeerService {
           { withCredentials: true }
       );
     }
+
+    deleteBeer(beerId: string) {
+    return this.ourHttp.delete(
+      this.baseUrl + '/api/favorites/' + beerId,
+      { withCredentials: true }
+    );
+}
 }

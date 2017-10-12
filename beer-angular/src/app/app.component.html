@@ -30,16 +30,36 @@
   <div class="nav-wrap">
     <nav class="main-nav" role="navigation">
       <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/signup">Sign Up</a></li>
-        <li><a routerLink="/login">Log In</a></li>
-        <li><a routerLink="/preferences">Preferences</a></li>
-        <li><a routerLink="/dashboard">Dashboard</a></li>
-        <li><a routerLink="/favorites">Favorites</a></li>
+
+        <div *ngIf="!userInfo">
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/signup">Sign Up</a></li>
+          <li><a routerLink="/login">Log In</a></li>
+        </div>
+        <div *ngIf="userInfo">
+          <li><a routerLink="/dashboard">Home</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+          <li><a routerLink="/styles">Styles</a></li>
+          <li><a routerLink="/preferences">Preferences</a></li>
+          <li><a routerLink="/favorites">Favorites</a></li>
+          <li><a routerLink="/favorites" (click)="logMeOut()">Log Out</a></li>
+        </div>
       </ul>
     </nav>
   </div>
 </header>
+
+<!-- <form (ngSubmit)="searchSubmit()" name='form-search' class="search">
+  <label for="searcg-input"> Search </label>
+  <input  id="searcg-input" type="text" placeholder="Heineken"
+      name="fullName" [(ngModel)]="newUser.signupFullName">
+    </form>
+
+    <form method="get" action="/connections/search-results">
+              <label for="term-input"></label>
+              <input  id="term-input" name="searchTerm" type="search" placeholder="Search... ">
+            </form> -->
 
 
 <router-outlet></router-outlet>
@@ -48,28 +68,27 @@
 <section class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-lg-3">
-          <h4 class="footer-titles">REVERA</h4>
-          <p class="fourth-text"> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vehicula erat non congue cursus. Aenean auctor nulla quis augue dictum, sed sagittis odio varius? Aliquam nec venenatis turpis. Aenean euismod arcu vel volutpat tristique. In mattis ipsum quis magna feugiat, id tempus metus accumsan.</p>
-      </div>
-      <div class="col-lg-3">
+      <div class="col-sm-4 left-box">
+          <img src="../assets/Bibix.png" class="footer-image">
+          <p class="fourth-text">
+
+          </div>
+
+      <div class="col-sm-4">
           <h4 class="footer-titles">META</h4>
-          <p class="fourth-text"> Log in <br />Entries RSS <br /> Comments RSS <br /> Wordpress.org <br /></p>
-        </div>
-      <div class="col-lg-3">
+          <a routerLink="/dashboard" class="footer-link">Home</a> <br>
+          <a routerLink="/preferences" class="footer-link">Preferences</a> <br>
+          <a routerLink="/favorites" class="footer-link">Favorites</a> <br>
+
+      </div>
+
+      <div class="col-sm-4">
           <h4 class="footer-titles">ARCHIVES</h4>
           <p class="fourth-text">
-            August 2013
-          </p>
-      </div>
-      <div class="col-lg-3">
-          <h4 class="footer-titles">RECENT POSTS</h4>
-          <p class="fourth-text">
-            Etiam mauris tortor, pharetra quis lobortis in, pharetra in diam <br />
-            Nunc libero elit, iaculis nec augue non <br />
-            Falauris sollicitudin quis dolor venenatis facilisis <br />
-            Phasellus aliquet iaculis neque accumsan aliquam <br />
-            Vivamus blandit ipsum sed arcu euismod <br />
+            <a routerLink="/dashboard" class="footer-link">About</a> <br>
+            <a href="https://github.com/emmalinekay" class="footer-link">GitHub</a> <br>
+            <a href="https://www.linkedin.com/in/emmalinesalles" class="footer-link">LinkedIn</a>
+
           </p>
       </div>
     </div>

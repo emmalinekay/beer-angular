@@ -34,7 +34,10 @@ export class BeerDetailsComponent implements OnInit {
 
   postFavorite(beerInfo){
     this.favorites.push(beerInfo);
-    this.ourBeer.postFav(this.favorites).subscribe()
+    this.ourBeer.postFav(this.favorites).subscribe(
+      () =>{
+      this.ourRouter.navigate(['/favorites']);
+    })
   }
 
 }
