@@ -50,3 +50,9 @@ section#landing {
     letter-spacing: 1px;
 		margin-top: 20px;
 }
+
+.join-btn:hover, .login-btn:hover {
+	background-color: rgba(255, 0, 0, 0.5);
+	color: black;
+	border-color: 1px solid black;
+}
